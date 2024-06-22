@@ -1,6 +1,10 @@
 package com.example.basicquizzapp
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -15,6 +19,17 @@ class MainActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+        val textName: EditText = findViewById(R.id.et_name)
+        val btnStart: Button = findViewById(R.id.btnStart)
+        btnStart.setOnClickListener{
+            if (textName.text.isEmpty()){
+                Toast.makeText(this,"Please enter your name to start.", Toast.LENGTH_LONG).show()
+            }else{
+                val intent = Intent(this, QuizQuestionsActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
         }
     }
 }
