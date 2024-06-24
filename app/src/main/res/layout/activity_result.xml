@@ -15,7 +15,7 @@
         android:id="@+id/tv_result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="Result"
+        android:text="Result"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textStyle="bold"
@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        tools:text="Hey, Congratulations!"
+        android:text="Hey, Congratulations!"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textStyle="bold"
@@ -62,6 +62,7 @@
         android:layout_marginTop="10dp"/>
 
     <Button
+        android:id="@+id/finishBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/white"
